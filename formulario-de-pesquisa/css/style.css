@@ -1,0 +1,120 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(/imagens/patinhas-de-gatinhos.jpg);
+    background-size: contain;
+}
+
+main {
+    margin-block: 3em;
+}
+
+header {
+    background-color: #dfdfdfe7;
+    padding-block: 2em;
+    margin-block: 2em;
+    text-align: center;
+}
+
+h1 {
+    color: #79303B;
+    font-family: 'Pangolin', cursive;
+    font-size: 2.55em;
+    font-weight: normal;
+}
+
+
+header p {
+    font-size: 0.85em;
+    padding-inline: 3em;
+}
+
+form {
+    background-color:#dfdfdfe7;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7em;
+    padding: 1em;
+}
+
+.form-items {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25em;
+}
+
+input, select {
+    padding: 0.3em;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    margin-left: 1em;
+}
+
+button {
+    background-color: #ffa052d7;
+    padding: 0.5em;
+}
+
+/* Breakpoint Tablet */
+@media screen and (min-width: 690px) {
+    main {
+        margin-inline: auto;
+        width: 70vw;
+    }
+
+    h1 {
+        font-size: 3.7em;
+    }
+
+    header p {
+        font-size: 1em;
+        padding-block: 0.5em;
+        padding-inline: 5em;
+    }
+
+}
+
+/* Breakpoint Desktop */
+@media screen and (min-width: 1100px) {
+    main {
+        font-size: 1.1em;
+        width: 55vw;
+    }
+
+    h1 {
+        font-size: 4.7em;
+    }
+
+    header p {
+        padding-inline: 7em;
+    }
+
+    header {
+        padding: 2em;
+    }
+
+    form {
+        padding-block: 2em;
+        padding-inline: 5em;
+    }
+
+    input, select, textarea, button {
+        font-size: 1em;
+    }
+}
+
+/* Breakpoint Desktop */
+@media screen and (min-width: 1600px) {
+    h1 {
+        font-size: 5.7em;
+    }
+
+    header p {
+        padding-inline: 10em;
+    }
+}
