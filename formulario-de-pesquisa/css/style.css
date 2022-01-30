@@ -10,11 +10,12 @@ body {
 }
 
 main {
-    margin-block: 3em;
+    margin-top: 3em;
 }
 
 header {
     background-color: #dfdfdfe7;
+    border-radius: 5px;
     padding-block: 2em;
     margin-block: 2em;
     text-align: center;
@@ -35,9 +36,11 @@ header p {
 
 form {
     background-color:#dfdfdfe7;
+    border-radius: 5px;
     display: flex;
     flex-direction: column;
     gap: 0.7em;
+    margin-bottom: 2em;
     padding: 1em;
 }
 
@@ -58,6 +61,14 @@ input[type="radio"], input[type="checkbox"] {
 button {
     background-color: #ffa052d7;
     padding: 0.5em;
+}
+
+footer {
+    background-color: #dfdfdf83;
+    border-radius: 5px 5px 0 0;
+    color: #ffffff;
+    padding: 0.7em;
+    text-align: center;
 }
 
 /* Breakpoint Tablet */
