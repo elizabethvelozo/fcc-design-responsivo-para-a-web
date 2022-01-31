@@ -6,7 +6,6 @@
 
 body {
     background-color: #ffe8c67e;
-    margin-top: 1.5em;
 }
 
 a, a:visited {
@@ -23,6 +22,7 @@ header {
     background-color: #c893007e;
     display: flex;
     justify-content: space-evenly;
+    margin-top: 1.5em;
 }
 
 h1 {
@@ -66,10 +66,60 @@ nav a span {
 nav a:hover span {
     color: #c89300;
 }
-/*FIM DA NAVEGAÇÃO */
+/* FIM DA NAVEGAÇÃO */
+
+/* ARTIGO */
+article {
+    background-color: #ffe8c67e;
+}
+
+h2 {
+    background-color: #c8930050;
+    font-size: 1.3em;
+    padding-left: 1em;
+    padding-block: 0.5em;
+}
+
+.img-caption {
+    font-size: small;
+}
+
+section p {
+    font-family: 'Source Serif Pro', serif;
+    font-size: 0.9em;
+    margin-bottom: 1em;
+    text-align: justify;
+}
+
+.section-corpo {
+    padding: 1.5em;
+}
+
+.img-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-div img {
+    border-radius: 50%;
+    margin-bottom: 1em;
+    width: 50vw;
+}
+/* FIM DO ARTIGO */
+
+/* FOOTER */
+footer {
+    background-color: #c8930050;
+    padding: 0.5em;
+    text-align: center;
+}
+/* FIM DO FOOTER */
 
 /* Breakpoint Tablet */
 @media screen and (min-width: 690px) {
+    /* HEADER */
     h1 {
         font-size: 3em;
     }
@@ -82,14 +132,41 @@ nav a:hover span {
         padding-inline: 2.5em;
     }
 
+    /* NAVEGAÇÃO */
     nav ul {
         font-size: 1.5em;
         padding-left: 1.5em;
+    }
+
+    /* ARTIGO */
+    article {
+        margin: auto;
+        width: 83vw;
+    }
+
+    h2 {
+        font-size: 1.5em;
+        padding-left: 2em;
+    }
+
+    section p {
+        font-size: 1em;
+    }
+
+    .section-corpo {
+        display: flex;
+        gap: 2.5em;
+        padding-inline: 3.5em;
+    }
+
+    .img-div img {
+        width: 30vw;
     }
 }
 
 /* Breakpoint Desktop */
 @media screen and (min-width: 1100px) {
+    /* HEADER */
     h1 {
         font-size: 4.5em;
     }
@@ -102,15 +179,39 @@ nav a:hover span {
         padding-inline: 3.5em;
     }
 
+    /* NAVEGAÇÃO */
     nav ul {
         border-width: 7px;
         font-size: 1.9em;
         padding-inline: 1.5em;
     }
+
+    /* ARTIGO */
+    article {
+        width: 70vw;
+    }
+
+    h2 {
+        font-size: 2em;
+        padding-left: 1.5em;
+    }
+
+    .img-caption {
+        font-size: smaller;
+    }
+
+    section p {
+        font-size: 1.1em;
+    }
+
+    .img-div img {
+        width: 20vw;
+    }
 }
 
 /* Breakpoint Desktop */
 @media screen and (min-width: 1600px) {
+    /* HEADER */
     h1 {
         font-size: 5.5em;
     }
@@ -119,8 +220,30 @@ nav a:hover span {
         padding-inline: 7em;
     }
 
+    /* NAVEGAÇÃO */
     nav ul {
         font-size: 1.9em;
         padding-inline: 4.5em;
+    }
+
+    /* ARTIGO */
+    h2 {
+        padding-left: 3em;
+    }
+
+    .img-caption {
+        font-size: medium;
+    }
+
+    section p {
+        font-size: 1.3em;
+    }
+
+    .section-corpo {
+        padding-inline: 6em;
+    }
+
+    .img-div img {
+        width: 15vw;
     }
 }
