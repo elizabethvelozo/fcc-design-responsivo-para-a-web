@@ -21,7 +21,7 @@ a:hover {
 header {
     background-color: #c893007e;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     margin-top: 1.5em;
 }
 
@@ -96,16 +96,21 @@ section p {
 }
 
 .img-div {
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
 }
 
 .img-div img {
     border-radius: 50%;
+    box-shadow: 5px 5px #c8930050;
     margin-bottom: 1em;
     width: 50vw;
+}
+
+.setinha {
+    display: none;
 }
 /* FIM DO ARTIGO */
 
@@ -141,7 +146,7 @@ footer {
     /* ARTIGO */
     article {
         margin: auto;
-        width: 83vw;
+        width: 80vw;
     }
 
     h2 {
@@ -154,13 +159,40 @@ footer {
     }
 
     .section-corpo {
-        display: flex;
-        gap: 2.5em;
         padding-inline: 3.5em;
     }
 
-    .img-div img {
+    .img-div {
+        float: left;
+        margin-right: 2em;
         width: 30vw;
+    }
+
+    .img-div img {
+        width: 25vw;
+    }
+
+    .img-caption {
+        font-size: x-small;
+    }
+
+    .setinha {
+        display: block;
+    }
+
+    .setinha-corpo {
+        background-color:antiquewhite;
+        border-radius: 50%;
+        bottom: 1.5rem;
+        box-shadow: 3px 3px #c893007e;
+        color: #a52a2a;
+        display: grid;
+        height: 5vw;
+        opacity: 0.5;
+        place-content: center;
+        position: fixed;
+        right: 1.3rem;
+        width: 5vw;
     }
 }
 
@@ -179,6 +211,11 @@ footer {
         padding-inline: 3.5em;
     }
 
+    #img-header {
+        position: relative;
+        left: 2.5em;
+    }
+
     /* NAVEGAÇÃO */
     nav ul {
         border-width: 7px;
@@ -188,7 +225,7 @@ footer {
 
     /* ARTIGO */
     article {
-        width: 70vw;
+        width: 65vw;
     }
 
     h2 {
@@ -204,8 +241,19 @@ footer {
         font-size: 1.1em;
     }
 
-    .img-div img {
+    .img-div {
         width: 20vw;
+    }
+
+    .img-div img {
+        width: 15vw;
+    }
+
+    .setinha-corpo {
+        height: 4.5vw;
+        font-size: 1.5em;
+        right: 6rem;
+        width: 4.5vw;
     }
 }
 
@@ -227,6 +275,10 @@ footer {
     }
 
     /* ARTIGO */
+    article {
+        width: 60vw;
+    }
+
     h2 {
         padding-left: 3em;
     }
@@ -243,7 +295,18 @@ footer {
         padding-inline: 6em;
     }
 
-    .img-div img {
+    .img-div {
         width: 15vw;
+    }
+
+    .img-div img {
+        width: 13vw;
+    }
+
+    .setinha-corpo {
+        height: 3.5vw;
+        font-size: 1.5em;
+        right: 9rem;
+        width: 3.5vw;
     }
 }
