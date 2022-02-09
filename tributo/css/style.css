@@ -1,15 +1,39 @@
 * {
+    box-sizing: border-box;
     font-family: 'Life Savers', cursive;
     margin: 0;
     padding: 0;
 }
 
-body {
-    background-color: #ffe8c67e;
+:root {
+    /* CORES */
+    --branco: #ffffff;
+    --bege-transparente: #d9c6a323;
+    --dourado-transparente: #d9ad5b86;
+    --dourado: #d9ad5b;
+    --marrom-claro: #a67a44;
+    --marrom: #734d2c;
+    --marrom-escuro: #260101;
+    --preto: #0d0d0d;
+
+    /* TAMANHOS - FONTES */
+    --titulo-principal-tamanho: 1.75em;
+    --subtitulo-tamanho: initial;
+    --navegacao-texto-tamanho: 1.2em;
+    --titulo-secundario-tamanho: 1.3em;
+    --legenda-tamanho: small;
+    --paragrafo-tamanho: 0.9em;
+
+    /* TAMANHOS - IMAGENS */
+    --imagem-section-tamanho: 50vw;
+}
+
+main {
+    background-color: var(--bege-transparente);
 }
 
 a, a:visited {
-    color: inherit;
+    color: var(--preto);
     text-decoration: none;
 }
 
@@ -19,14 +43,19 @@ a:hover {
 
 /* HEADER */
 header {
-    background-color: #c893007e;
+    border-top: 20px solid var(--marrom-claro);
     display: flex;
     justify-content: center;
-    margin-top: 1.5em;
+    padding-top: 0.3em;
+}
+
+header p {
+    font-size: var(--subtitulo-tamanho);
 }
 
 h1 {
-    font-size: 1.7em;
+    color: var(--marrom);
+    font-size: var(--titulo-principal-tamanho);
 }
 
 #cabecalho {
@@ -34,7 +63,7 @@ h1 {
     flex-direction: column;
     gap: 0.5em;
     justify-content: center;
-    padding-inline: 1em;
+    padding-left: 1em;
     text-align: center;
 }
 
@@ -44,69 +73,73 @@ h1 {
 
 #img-header img {
     object-fit: fill;
+    opacity: 0.8;
     width: 100%;
 }
 /* FIM DA HEADER */
 
 /* NAVEGAÇÃO */
 nav ul {
-    border-block: 5px solid #c893007e;
+    background-color: var(--branco);
+    border-block: 5px solid var(--dourado);
     display: flex;
-    font-size: 1.2em;
+    font-size: var(--navegacao-texto-tamanho);
     justify-content: space-evenly;
     list-style: none;
-    margin-block: 0.5em;
+    margin-block: 0.1em;
     padding: 0.5em;
 }
 
 nav a span {
-    color: #ffe8c67e;
+    color: var(--branco);
 }
 
 nav a:hover span {
-    color: #c89300;
+    color: var(--dourado);
 }
 /* FIM DA NAVEGAÇÃO */
 
 /* ARTIGO */
 article {
-    background-color: #ffe8c67e;
-}
-
-h2 {
-    background-color: #c8930050;
-    font-size: 1.3em;
-    padding-left: 1em;
-    padding-block: 0.5em;
+    background-color: var(--bege-transparente);
+    padding-block: 1em;
 }
 
 .img-caption {
-    font-size: small;
+    font-size: var(--legenda-tamanho);
+}
+
+section {
+    padding: 1.5em 1.5em 0 1.5em;
+}
+
+h2 {
+    border-bottom: 1px solid var(--dourado-transparente);
+    color: var(--marrom);
+    font-size: var(--titulo-secundario-tamanho);
+    margin-bottom: 1em;
+    padding-bottom: 0.3em;
 }
 
 section p {
     font-family: 'Source Serif Pro', serif;
-    font-size: 0.9em;
+    font-size: var(--paragrafo-tamanho);
     margin-bottom: 1em;
     text-align: justify;
-}
-
-.section-corpo {
-    padding: 1.5em;
 }
 
 .img-div {
     align-items: center;
     display: flex;
     flex-direction: column;
+    gap: 1.5em;
     justify-content: center;
 }
 
 .img-div img {
     border-radius: 50%;
-    box-shadow: 5px 5px #c8930050;
-    margin-bottom: 1em;
-    width: 50vw;
+    box-shadow: 5px 5px var(--dourado-transparente);
+    width: var(--imagem-section-tamanho);
 }
 
 .setinha {
@@ -116,21 +149,31 @@ section p {
 
 /* FOOTER */
 footer {
-    background-color: #c8930050;
+    background-color: var(--dourado-transparente);
     padding: 0.5em;
+    margin-top: 0.1em;
     text-align: center;
 }
 /* FIM DO FOOTER */
 
-/* Breakpoint Tablet */
+/* BREAKPOINT TABLET */
 @media screen and (min-width: 690px) {
-    /* HEADER */
-    h1 {
-        font-size: 3em;
+    :root {
+        /* TAMANHOS DE FONTE */
+        --titulo-principal-tamanho: 3em;
+        --subtitulo-tamanho: 1.3em;
+        --navegacao-texto-tamanho: 1.5em;
+        --titulo-secundario-tamanho: 1.5em;
+        --legenda-tamanho: x-small;
+        --paragrafo-tamanho: 1em;
+
+        /* TAMANHOS - IMAGENS */
+        --div-imagem-section-tamanho: 30vw;
+        --imagem-section-tamanho: 25vw;
     }
 
-    header p {
-        font-size: 1.3em;
+    header, nav ul, article, footer {
+        border-inline: 1px solid var(--preto);
     }
 
     header {
@@ -139,41 +182,17 @@ footer {
 
     /* NAVEGAÇÃO */
     nav ul {
-        font-size: 1.5em;
         padding-left: 1.5em;
     }
 
-    /* ARTIGO */
-    article {
-        margin: auto;
-        width: 80vw;
-    }
-
-    h2 {
-        font-size: 1.5em;
-        padding-left: 2em;
-    }
-
-    section p {
-        font-size: 1em;
-    }
-
-    .section-corpo {
-        padding-inline: 3.5em;
+    section {
+        padding-inline: 7em;
     }
 
     .img-div {
         float: left;
         margin-right: 2em;
-        width: 30vw;
-    }
-
-    .img-div img {
-        width: 25vw;
-    }
-
-    .img-caption {
-        font-size: x-small;
+        width: var(--div-imagem-section-tamanho);
     }
 
     .setinha {
@@ -181,14 +200,14 @@ footer {
     }
 
     .setinha-corpo {
-        background-color:antiquewhite;
+        background-color: var(--bege-transparente);
         border-radius: 50%;
         bottom: 1.5rem;
-        box-shadow: 3px 3px #c893007e;
-        color: #a52a2a;
+        box-shadow: 3px 3px var(--dourado);
+        color: var(--marrom-escuro);
         display: grid;
         height: 5vw;
-        opacity: 0.5;
+        opacity: 0.7;
         place-content: center;
         position: fixed;
         right: 1.3rem;
@@ -198,115 +217,85 @@ footer {
 
 /* Breakpoint Desktop */
 @media screen and (min-width: 1100px) {
-    /* HEADER */
-    h1 {
-        font-size: 4.5em;
+    :root {
+        /* TAMANHOS DE FONTE */
+        --titulo-principal-tamanho: 3.5em;
+        --subtitulo-tamanho: 1.7em;
+        --navegacao-texto-tamanho: 1.9em;
+        --titulo-secundario-tamanho: 2em;
+        --legenda-tamanho: smaller;
+        --paragrafo-tamanho: 1.1em;
+
+        /* TAMANHOS - IMAGENS */
+        --div-imagem-section-tamanho: 17vw;
+        --imagem-section-tamanho: 15vw;
     }
 
-    header p {
-        font-size: 1.7em;
+    main {
+        margin: auto;
+        width: 60vw;
     }
 
     header {
-        padding-inline: 3.5em;
+        padding-inline: 2.5em;
     }
 
-    #img-header {
-        position: relative;
-        left: 2.5em;
+    #cabecalho {
+        gap: 0;
+        padding-inline: 0;
     }
 
-    /* NAVEGAÇÃO */
     nav ul {
-        border-width: 7px;
-        font-size: 1.9em;
+        border-block-width: 7px;
         padding-inline: 1.5em;
     }
 
-    /* ARTIGO */
-    article {
-        width: 65vw;
+    #grace h2, #hedy h2 {
+        text-align: end;
     }
 
-    h2 {
-        font-size: 2em;
-        padding-left: 1.5em;
-    }
-
-    .img-caption {
-        font-size: smaller;
-    }
-
-    section p {
-        font-size: 1.1em;
-    }
-
-    .img-div {
-        width: 20vw;
-    }
-
-    .img-div img {
-        width: 15vw;
+    #grace .img-div, #hedy .img-div {
+        float: right;
+        margin-left: 2em;
+        margin-right: 0;
     }
 
     .setinha-corpo {
         height: 4.5vw;
         font-size: 1.5em;
-        right: 6rem;
+        right: 7rem;
         width: 4.5vw;
     }
 }
 
 /* Breakpoint Desktop */
 @media screen and (min-width: 1600px) {
-    /* HEADER */
-    h1 {
-        font-size: 5.5em;
+    :root {
+        /* TAMANHOS DE FONTE */
+        --legenda-tamanho: medium;
+        --paragrafo-tamanho: 1.3em;
+
+        /* TAMANHOS - IMAGENS */
+        --div-imagem-section-tamanho: 15vw;
+        --imagem-section-tamanho: 13vw;
     }
 
-    header {
-        padding-inline: 7em;
+    main {
+        width: 55vw;
     }
 
-    /* NAVEGAÇÃO */
     nav ul {
-        font-size: 1.9em;
-        padding-inline: 4.5em;
+        padding-inline: 3em;
     }
 
-    /* ARTIGO */
-    article {
-        width: 60vw;
-    }
-
-    h2 {
-        padding-left: 3em;
-    }
-
-    .img-caption {
-        font-size: medium;
-    }
-
-    section p {
-        font-size: 1.3em;
-    }
-
-    .section-corpo {
-        padding-inline: 6em;
-    }
-
-    .img-div {
-        width: 15vw;
-    }
-
-    .img-div img {
-        width: 13vw;
+    section {
+        padding-inline: 10em;
     }
 
     .setinha-corpo {
         height: 3.5vw;
         font-size: 1.5em;
-        right: 9rem;
+        right: 11rem;
         width: 3.5vw;
     }
 }
