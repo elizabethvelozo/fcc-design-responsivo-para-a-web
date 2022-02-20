@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Josefin Slab', serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+:root {
+    /* PALETA DE CORES */
+    --feijao: #713928;
+    --hena: #994638;
+    --quentao: #C4953E;
+    --quentao-iluminado: #D9AD5B;
+    --terracota: #E07A5F;
+    --rosa-bebe: #FFD0C7;
+    --champanhe: #F8E9D1;
+    --algodao-egipcio: #E6DFCE;
+    --branco-florido: #FFF8F0;
+
+    /* TAMANHOS DE FONTES */
+    --tamanho-logo__nome: 3.5em;
+    --tamanho-logo__sobrenome: 1.7em;
+    --tamanho-li-navegacao-principal: 1.1em;
+}
+
+body {
+    background-color: var(--branco-florido);
+    color: var(--feijao);
+}
+
+a, a:visited {
+    color: inherit;
+}
+
+/* HEADER */
+header {
+    background-color: var(--algodao-egipcio);
+    margin-bottom: 0.5em;
+    position: fixed;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+div.logo {
+    margin: auto;
+    padding-block: 2em;
+    min-width: 187px;
+    width: 187px;
+}
+
+div.logo p {
+    line-height: 1em;
+}
+
+p.logo__nome {
+    color: var(--terracota);
+    font-family: 'Annie Use Your Telescope', cursive;
+    font-size: var(--tamanho-logo__nome);
+    padding-inline: 0.17em;
+}
+
+p.logo__sobrenome {
+    display: block;
+    font-family: 'Lekton', sans-serif;
+    font-size: var(--tamanho-logo__sobrenome);
+    text-align: end;
+}
+
+nav ul {
+    display: flex;
+    font-size: var(--tamanho-li-navegacao-principal);
+    font-weight: bolder;
+    justify-content: space-around;
+    list-style: none;
+    padding: 1em;
+}
+/* FIM DA HEADER */
+
+/* BREAKPOINT TABLET */
+@media screen and (min-width: 690px) {
+    :root {
+        --tamanho-li-navegacao-principal: 1.17em;
+    }
+
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-inline: 4.5em;
+    }
+
+    div.logo {
+        margin: 0;
+        padding-block: 1em;
+    }
+
+    nav ul {
+        gap: 2em;
+    }
+}
+
+/* BREAKPOINT DESKTOP */
+@media screen and (min-width: 1100px) {
+    :root {
+        --tamanho-li-navegacao-principal: 1.3em;
+    }
+
+    header {
+        padding-inline: 15em;
+    }
+
+    nav ul {
+        gap: 3em;
+    }
+}
+
+/* BREAKPOINT DESKTOP */
+@media screen and (min-width: 1600px) {
+    header {
+        padding-inline: 25em;
+    }
+}
