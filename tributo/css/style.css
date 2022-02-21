@@ -107,6 +107,7 @@ article {
 
 .img-caption {
     font-size: var(--legenda-tamanho);
+    text-align: center;
 }
 
 section {
@@ -142,6 +143,17 @@ section p {
     width: var(--imagem-section-tamanho);
 }
 
+.tribute-info {
+    display: block;
+    font-family: 'Source Serif Pro', serif;
+    font-size: var(--paragrafo-tamanho);
+}
+
+.tribute-info i {
+    color: var(--dourado);
+    font-size: medium;
+}
+
 .setinha {
     display: none;
 }
@@ -172,10 +184,6 @@ footer {
         --imagem-section-tamanho: 25vw;
     }
 
-    header, nav ul, article, footer {
-        border-inline: 1px solid var(--preto);
-    }
-
     header {
         padding-inline: 2.5em;
     }
@@ -193,6 +201,16 @@ footer {
         float: left;
         margin-right: 2em;
         width: var(--div-imagem-section-tamanho);
+    }
+
+    #hedy h2, #hedy a.tribute-info, #grace h2, #grace a.tribute-info {
+        text-align: end;
+    }
+
+    #grace .img-div, #hedy .img-div {
+        float: right;
+        margin-left: 2em;
+        margin-right: 0;
     }
 
     .setinha {
@@ -231,6 +249,10 @@ footer {
         --imagem-section-tamanho: 15vw;
     }
 
+    header, nav ul, article, footer {
+        border-inline: 1px solid var(--preto);
+    }
+
     main {
         margin: auto;
         width: 60vw;
@@ -248,16 +270,6 @@ footer {
     nav ul {
         border-block-width: 7px;
         padding-inline: 1.5em;
-    }
-
-    #grace h2, #hedy h2 {
-        text-align: end;
-    }
-
-    #grace .img-div, #hedy .img-div {
-        float: right;
-        margin-left: 2em;
-        margin-right: 0;
     }
 
     .setinha-corpo {
