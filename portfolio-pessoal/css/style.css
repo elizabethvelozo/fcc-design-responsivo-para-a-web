@@ -22,11 +22,19 @@
     --tamanho-logo__nome: 3.5em;
     --tamanho-logo__sobrenome: 1.7em;
     --tamanho-li-navegacao-principal: 1.1em;
+    --tamanho-titulo-principal: 2em;
+
+    /* TAMANHOS DE IMAGENS */
+    --tamanho-imagem-principal: 90vw;
 }
 
 body {
     background-color: var(--branco-florido);
+    background-image: url("/imagens/plano-de-fundo.png");
+    background-repeat: no-repeat;
+    background-size: 100% 170vh;
     color: var(--feijao);
+    z-index: 2;
 }
 
 a, a:visited {
@@ -37,9 +45,6 @@ a, a:visited {
 header {
     background-color: var(--algodao-egipcio);
     margin-bottom: 0.5em;
-    position: fixed;
-    left: 0;
-    right: 0;
     text-align: center;
 }
 
@@ -78,17 +83,83 @@ nav ul {
 }
 /* FIM DA HEADER */
 
+/* MAIN */
+section#welcome-section {
+    height: 100vh;
+}
+
+div.welcome-section-corpo {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    padding-top: 2em;
+}
+
+#welcome-section img{
+    animation: menina-codando 5s 1 ease;
+    position: relative;
+    width: var(--tamanho-imagem-principal);
+}
+
+div.titulo {
+    width: 80vw;
+}
+
+h1 {
+    font-size: var(--tamanho-titulo-principal);
+    font-weight: normal;
+}
+
+div.titulo span:not(.titulo__pontuacao) {
+    display: flex;
+}
+
+div.titulo span.titulo__nome, span.titulo__sobrenome {
+    color: var(--terracota);
+    font-size: 1.75em;
+    text-transform: uppercase;
+}
+
+div.titulo span.titulo__pontuacao {
+    color: var(--feijao);
+}
+
+@keyframes menina-codando {
+    0% {
+        top: 0px;
+    }
+    50% {
+        top: 30px;
+    }
+
+    100% {
+        top: 0px;
+    }
+}
+/* FIM DA MAIN */
+
 /* BREAKPOINT TABLET */
 @media screen and (min-width: 690px) {
     :root {
         --tamanho-li-navegacao-principal: 1.17em;
+        --tamanho-imagem-principal: 40vw;
+    }
+
+    body {
+        background-size: 100% 65vh;
     }
 
     header {
-        display: flex;
         align-items: center;
+        display: flex;
         justify-content: space-between;
+        left: 0;
         padding-inline: 4.5em;
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 1;
     }
 
     div.logo {
@@ -99,26 +170,63 @@ nav ul {
     nav ul {
         gap: 2em;
     }
+
+    div.welcome-section-corpo {
+        flex-direction: row;
+        justify-content: space-between;
+        margin: auto;
+        max-width: 80vw;
+        padding-top: 15vh;
+    }
+
+    div.titulo {
+        align-self: flex-end;
+        width: auto;
+    }
 }
 
 /* BREAKPOINT DESKTOP */
 @media screen and (min-width: 1100px) {
     :root {
+        /* TAMANHOS DE FONTES */
         --tamanho-li-navegacao-principal: 1.3em;
+        --tamanho-titulo-principal: 3em;
+
+        /* TAMANHOS DE IMAGENS */
+        --tamanho-imagem-principal: 30vw;
+    }
+
+    body {
+        background-size: 100% 105vh;
     }
 
     header {
-        padding-inline: 15em;
+        padding-inline: 13em;
     }
 
     nav ul {
         gap: 3em;
+    }
+
+    div.welcome-section-corpo {
+        gap: 3em;
+        max-width: 68vw;
+        padding-top: 25vh;
     }
 }
 
 /* BREAKPOINT DESKTOP */
 @media screen and (min-width: 1600px) {
     header {
-        padding-inline: 25em;
+        padding-inline: 23em;
+    }
+
+    div.welcome-section-corpo {
+        max-width: 59vw;
+        padding-top: 20vh;
+    }
+
+    section#welcome-section img{
+        width: 30vw;
     }
 }
