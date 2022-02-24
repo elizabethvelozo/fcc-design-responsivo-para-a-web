@@ -1,11 +1,12 @@
 * {
+    box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
 }
 
 body {
-    background-image: url(/imagens/patinhas-de-gatinhos.jpg);
+    background-image: url("../imagens/patinhas-de-gatinhos.jpg");
     background-size: contain;
 }
 
@@ -13,21 +14,24 @@ main {
     margin-top: 3em;
 }
 
+header, form {
+    background-color: #dfdfdfd8;
+    backdrop-filter: blur(7px);
+}
+
 header {
-    background-color: #dfdfdfe7;
-    border-radius: 5px;
     padding-block: 2em;
     margin-block: 2em;
     text-align: center;
 }
 
 h1 {
-    color: #79303B;
+    color: #238191;
     font-family: 'Pangolin', cursive;
     font-size: 2.55em;
     font-weight: normal;
+    text-shadow: 1px 1px 1px #000000;
 }
-
 
 header p {
     font-size: 0.85em;
@@ -35,8 +39,6 @@ header p {
 }
 
 form {
-    background-color:#dfdfdfe7;
-    border-radius: 5px;
     display: flex;
     flex-direction: column;
     gap: 0.7em;
@@ -44,14 +46,20 @@ form {
     padding: 1em;
 }
 
-.form-items {
+fieldset {
+    border: none;
     display: flex;
     flex-direction: column;
     gap: 0.25em;
 }
 
-input, select {
-    padding: 0.3em;
+button, input, select, textarea {
+    border: none;
+    border-radius: 3px;
+}
+
+button, input, select {
+    padding: 0.5em;
 }
 
 input[type="radio"], input[type="checkbox"] {
@@ -60,13 +68,13 @@ input[type="radio"], input[type="checkbox"] {
 
 button {
     background-color: #ffa052d7;
-    padding: 0.5em;
+    box-shadow: 1px 5px 5px #c0c0c0;
 }
 
 footer {
     background-color: #dfdfdf83;
     border-radius: 5px 5px 0 0;
-    color: #ffffff;
+    color: #000000;
     padding: 0.7em;
     text-align: center;
 }
@@ -76,6 +84,10 @@ footer {
     main {
         margin-inline: auto;
         width: 70vw;
+    }
+
+    header, form {
+        border-radius: 10px;
     }
 
     h1 {
