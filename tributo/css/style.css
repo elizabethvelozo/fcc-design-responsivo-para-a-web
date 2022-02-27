@@ -140,16 +140,17 @@ section p {
 .img-div img {
     border-radius: 50%;
     box-shadow: 5px 5px var(--dourado-transparente);
+    max-width: var(--imagem-section-tamanho);
     width: var(--imagem-section-tamanho);
 }
 
-.tribute-info {
+.tribute-link {
     display: block;
     font-family: 'Source Serif Pro', serif;
     font-size: var(--paragrafo-tamanho);
 }
 
-.tribute-info i {
+.tribute-link i {
     color: var(--dourado);
     font-size: medium;
 }
