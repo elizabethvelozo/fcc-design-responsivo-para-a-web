@@ -18,87 +18,81 @@
 </head>
 
 <body>
-    <main>
-        <header>
-            <h1 id="title">Adoção de Gatinhos</h1>
-            <p id="description">Ao responder este formulário, você nos ajuda a entender qual dos nossos gatinhos mais combina com você.</p>
-        </header>
+    <div class="filtro">
+        <main>
+            <header>
+                <h1 id="title">Adoção de Gatinhos</h1>
+                <p id="description">Ao responder este formulário, você nos ajuda a entender qual dos nossos gatinhos mais combina com você.</p>
+            </header>
+            <form id="survey-form" action="#">
+                <fieldset>
+                    <label id="name-label" for="name">Nome</label>
+                    <input id="name" type="text" placeholder="Lorema Ipsum Dolores" required>
+                    <label id="email-label" for="email">E-mail</label>
+                    <input id="email" type="email" placeholder="lorema.id@email.com" required>
+                    <label id="number-label" for="number">Idade</label>
+                    <input id="number" type="number" min="18" max="100" placeholder="18" required>
+                </fieldset>
+                <fieldset name="situacao-financeira">
+                    <label for="dropdown">Situação Financeira</label>
+                    <select id="dropdown" name="situacao-financeira">
+                        <option>Escolha uma opção</option>
+                        <option value="empregada">Empregada</option>
+                        <option value="desempregada">Desempregada</option>
+                        <option value="sustentada">Sustentada por parente/amigo</option>
+                    </select>
+                </fieldset>
+                <fieldset name="tela-protecao">
+                    <legend>Sua casa possui tela de proteção?</legend>
+                    <label for="sim">
+                        <input id="sim" value="sim" type="radio" name="tela-protecao"> Sim
+                    </label>
+                    <label for="nao">
+                        <input id="nao" value="nao" type="radio" name="tela-protecao" checked> Não
+                    </label>
+                </fieldset>
+                <fieldset name="adotaria-srd">
+                    <legend>Você adotaria um animal sem raça definida?</legend>
+                    <label for="sim">
+                        <input id="sim" value="sim" type="radio" name="adotaria-srd" checked> Sim, amo todos os tipos de gatinhos.
+                    </label>
+                    <label for="nao">
+                        <input id="nao" value="nao" type="radio" name="adotaria-srd"> Não, só gosto de animais de raça.
+                    </label>
+                </fieldset>
+                <fieldset name="personalidade">
+                    <legend>Quais traços de personalidade você gosta num gatinho?</legend>
+                    <label for="carinhoso">
+                        <input id="carinhoso" value="carinhoso" type="checkbox" name="personalidade" checked> Carinhoso
+                    </label>
+                    <label for="antissocial">
+                        <input id="antissocial" value="antissocial" type="checkbox" name="personalidade"> Antissocial
+                    </label>
+                    <label for="brincalhao">
+                        <input id="brincalhao" value="brincalhao" type="checkbox" name="personalidade"> Brincalhão
+                    </label>
+                    <label for="preguicoso">
+                        <input id="preguicoso" value="preguicoso" type="checkbox" name="personalidade"> Preguiçoso
+                    </label>
+                    <label for="falante">
+                        <input id="falante" value="falante" type="checkbox" name="personalidade"> Falante(miante)
+                    </label>
+                    <label for="quietinho">
+                        <input id="quietinho" value="quietinho" type="checkbox" name="personalidade"> Quietinho
+                    </label>
+                </fieldset>
+                <fieldset name="historia">
+                    <label for="historia">Conte-nos por que quer tanto ser adotada por um gatinho:</label>
+                    <textarea name="historia" id="historia" cols="30" rows="10">Digite aqui sua história com os felinos.</textarea>
+                </fieldset>
+                <button id="submit" type="submit">Enviar</button>
+            </form>
+        </main>
+        <footer>
+            <p>Elizabeth Velozo &copy; 2022 </p>
+        </footer>
+    </div>
 
-        <form id="survey-form" action="#">
-
-            <fieldset>
-                <label id="name-label" for="name">Nome</label>
-                <input id="name" type="text" placeholder="Lorema Ipsum Dolores" required>
-
-                <label id="email-label for="email">E-mail</label>
-                <input id="email" type="email" placeholder="lorema.id@email.com" required>
-
-                <label id="number-label" for="number">Idade</label>
-                <input id="number" type="number" min="18" max="100" placeholder="18" required>
-            </fieldset>
-
-            <fieldset name="situacao-financeira">
-                <label for="dropdown">Situação Financeira</label>
-                <select id="dropdown" name="situacao-financeira">
-                    <option>Escolha uma opção</option>
-                    <option value="empregada">Empregada</option>
-                    <option value="desempregada">Desempregada</option>
-                    <option value="sustentada">Sustentada por parente/amigo</option>
-                </select>
-            </fieldset>
-
-            <fieldset name="tela-protecao">
-                <p>Sua casa possui tela de proteção?</p>
-                <label for="sim">
-                    <input id="sim" value="sim" type="radio" name="tela-protecao"> Sim
-                </label>
-                <label for="nao">
-                    <input id="nao" value="nao" type="radio" name="tela-protecao" checked> Não
-                </label>
-            </fieldset>
-
-            <fieldset name="adotaria-srd">
-                <p>Você adotaria um animal sem raça definida?</p>
-                <label for="sim">
-                    <input id="sim" value="sim" type="radio" name="adotaria-srd" checked> Sim, amo todos os tipos de gatinhos.
-                </label>
-                <label for="nao">
-                    <input id="nao" value="nao" type="radio" name="adotaria-srd"> Não, só gosto de animais de raça.
-                </label>
-            </fieldset>
-
-            <fieldset name="personalidade">
-                <legend>Quais traços de personalidade você gosta num gatinho?</legend>
-                <label for="carinhoso">
-                    <input id="carinhoso" value="carinhoso" type="checkbox" name="personalidade" checked> Carinhoso
-                </label>
-                <label for="antissocial">
-                    <input id="antissocial" value="antissocial" type="checkbox" name="personalidade"> Antissocial
-                </label>
-                <label for="brincalhao">
-                    <input id="brincalhao" value="brincalhao" type="checkbox" name="personalidade"> Brincalhão
-                </label>
-                <label for="preguicoso">
-                    <input id="preguicoso" value="preguicoso" type="checkbox" name="personalidade"> Preguiçoso
-                </label>
-                <label for="falante">
-                    <input id="falante" value="falante" type="checkbox" name="personalidade"> Falante(miante)
-                </label>
-                <label for="quietinho">
-                    <input id="quietinho" value="quietinho" type="checkbox" name="personalidade"> Quietinho
-                </label>
-            </fieldset>
-
-            <fieldset name="historia">
-                <label for="historia">Conte-nos por que quer tanto ser adotada por um gatinho:</label>
-                <textarea name="historia" id="historia" cols="30" rows="10">Digite aqui sua história com os felinos.</textarea>
-            </fieldset>
-            <button type="submit">Enviar</button>
-        </form>
-    </main>
-
-    <footer>
-        <p>Elizabeth Velozo &copy; 2022 </p>
-    </footer>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
 </html>
