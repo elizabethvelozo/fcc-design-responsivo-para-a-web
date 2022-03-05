@@ -7,18 +7,23 @@
 
 :root {
     /* CORES */
+    --areia-do-deserto: #e5be9e;
+    --azul-matinal: #86a397;
     --branco: #ffffff;
     --branco-transparente: #ffffffc9;
+    --caqui: #cbc0ad;
     --cinza-claro: #c0c0c0;
     --cinza-escuro: #3e3936;
-    --marrom: #7a4c3d;
-    --marrom-claro: #9c624f;
+    --tronco: #7a4c3d;
+    --vermelho-amarelado-medio: #e1b07e;
 
     /* TAMANHOS DE FONTES */
     --tamanho-logo: 3.5em;
+    --tamanho-p-descricao: 1em;
 }
 
 body {
+    color: var(--cinza-escuro);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
@@ -41,7 +46,7 @@ header .menu-fixo {
 }
 
 h1 {
-    color: var(--marrom);
+    color: var(--tronco);
     font-family: 'Spectral SC', serif;
     font-size: var(--tamanho-logo);
     padding-block: 0.5em;
@@ -56,7 +61,7 @@ nav ul {
 }
 
 nav ul a:hover {
-    color: var(--marrom-claro);
+    color: var(--vermelho-amarelado-medio);
 }
 
 i {
@@ -64,7 +69,7 @@ i {
 }
 
 img#header-img {
-    top: 17vh;
+    top: 20vh;
     left: -5em;
     position: fixed;
     width: 150vw;
@@ -78,7 +83,7 @@ main {
     backdrop-filter: blur(5px);
     padding-inline: 1em;
     position: relative;
-    top: 47vh;
+    top: 55vh;
     z-index: 2;
 }
 
@@ -86,22 +91,29 @@ section {
     align-items: center;
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: 1.5em;
     margin-top: 1.3em;
+}
+
+p.descricao:first-letter {
+    font-size: xx-large;
+    font-weight: bolder;
 }
 
 p.descricao {
     color: var(--cinza-escuro);
+    font-size: var(--tamanho-p-descricao);
     padding-block: 2em 1em;
     text-align: justify;
 }
+
 
 section#produtos {
     text-align: center;
 }
 
 .video {
-    height: 25vh;
+    height: 30vh;
     width: 90vw;
 }
 
@@ -109,7 +121,43 @@ iframe {
     height: 100%;
     width: 100%;
 }
+
+.cartoes-container {
+    display: grid;
+    gap: 2em;
+    height: auto;
+    width: 70vw;
+}
+
+.cartao {
+    background-color: var(--branco);
+    border: 1px dotted var(--azul-matinal);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 1em;
+    padding: 1.5em;
+    width: 100%;
+}
+
+h3 {
+    border-bottom: 1px solid var(--cinza-escuro);
+    padding: 0.5em;
+}
+
+.cartao__botao {
+    background-color: var(--vermelho-amarelado-medio);
+    border-radius: 25px;
+    padding: 1em;
+    margin-top: auto;
+}
 /* FIM DA MAIN */
+
+/* FOOTER */
+footer {
+    text-align: center;
+}
+/* FIM DA FOOTER */
 
 /* BREAKPOINT TABLET */
 @media screen and (min-width: 690px) {
@@ -129,7 +177,7 @@ iframe {
     img#header-img {
         left: -2;
         top: 3vh;
-        width: 110vw;
+        width: 115vw;
     }
 
     nav ul {
@@ -142,15 +190,22 @@ iframe {
     }
 
     .video {
-        width: 70vw;
+        width: 80vw;
+    }
+
+    .cartoes-container {
+        gap: 3em;
+        grid-template-columns: 40% 40%;
+        width: 80vw;
+        place-content: center;
     }
 }
-
 /* BREAKPOINT DESKTOP */
 @media screen and (min-width: 1100px) {
     :root {
         /* TAMANHOS DE FONTES */
         --tamanho-logo: 4em;
+        --tamanho-p-descricao: 1.25em;
     }
 
     header .menu-fixo {
@@ -158,7 +213,7 @@ iframe {
     }
 
     img#header-img {
-        left: -10em;
+        left: -8em;
         top: -1vh;
         width: 110vw;
     }
@@ -169,7 +224,16 @@ iframe {
     }
 
     main {
-        padding-inline: 17em;
+        padding-inline: 20vw;
         top: 80vh;
+    }
+
+    .video {
+        height: 70vh;
+        width: 60vw;
+    }
+
+    .cartoes-container {
+        grid-template-columns: 25% 25% 25%;
     }
 }
