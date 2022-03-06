@@ -14,7 +14,7 @@
     <!-- Fonte -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Spectral+SC:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,700&family=Spectral+SC:wght@200&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -36,60 +36,63 @@
         <img id="header-img" src="imagens/flautas-doce.jpg" alt="Flautas doce">
     </header>
 
-    <main>
-        <section id="sobre">
-            <p class="descricao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae sed labore maxime deserunt debitis, adipisci excepturi doloremque cum saepe autem veniam magni. Officia rerum vel a ad alias asperiores qui. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptas amet perferendis minima voluptates et fugit, iusto laudantium magni. Facilis doloremque provident perspiciatis voluptas ratione, laudantium commodi voluptatem tempora! Dolorem.</p>
-        </section>
-
-        <section id="produtos">
-            <h2>Ouça a sonoridade das nossas flautas</h2>
-            <div class="video">
-                <iframe id="video" src="https://www.youtube.com/embed/sRsdeyWBfqc?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div class="corpo-rolante">
+        <main>
+            <div class="frase-inicial">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             </div>
 
-            <section id="precos">
-                <h2>Preços</h2>
-                <div class="cartoes-container">
-                    <div class="cartao cartao-sopranino">
-                        <h3>Sopranino</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae commodi unde in.</p>
-                        <p>R$ 5,000</p>
-                        <br>
-                        <a class="cartao__botao" href="#">Selecionar</a>
+            <div class="corpo-secoes">
+                <section id="sobre">
+                    <h2>Ouça a sonoridade das nossas flautas</h2>
+                    <div class="video">
+                        <iframe id="video" src="https://www.youtube.com/embed/sRsdeyWBfqc?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
-                    <div class="cartao cartao-soprano">
-                        <h3>Soprano</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae commodi unde in.</p>
-                        <p>R$ 5,000</p>
-                        <br>
-                        <a class="cartao__botao" href="#">Selecionar</a>
-                    </div>
-                    <div class="cartao cartao-alto">
-                        <h3>Alto</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae commodi unde in.</p>
-                        <p>R$ 5,000</p>
-                        <br>
-                        <a class="cartao__botao" href="#">Selecionar</a>
-                    </div>
-                </div>
-            </section>
-        </section>
+                </section>
 
-        <section id="contato">
-            <form id="form" action="https://www.freecodecamp.com/email-enviar">
-                <fieldset>
-                    <legend>Cadastre seu e-mail para receber promoções</legend>
-                    <input type="email" name="email" id="email" placeholder="loremaipsum@email.com">
-                    <input type="submit" value="Enviar" id="submit">
-                </fieldset>
-            </form>
+                <section id="produtos">
+                    <h2>Preços</h2>
+                    <div class="cartoes-container">
+                        <div class="cartao cartao-sopranino">
+                            <h3>Sopranino</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae commodi unde in.</p>
+                            <p class="preco">R$ 7,000</p>
+                            <br>
+                            <a class="cartao__botao" href="#">Selecionar</a>
+                        </div>
+                        <div class="cartao cartao-soprano">
+                            <h3>Soprano</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae commodi unde in.</p>
+                            <p class="preco">R$ 5,000</p>
+                            <br>
+                            <a class="cartao__botao" href="#">Selecionar</a>
+                        </div>
+                        <div class="cartao cartao-alto">
+                            <h3>Alto</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae commodi unde in.</p>
+                            <p class="preco">R$ 12,000</p>
+                            <br>
+                            <a class="cartao__botao" href="#">Selecionar</a>
+                        </div>
+                    </div>
+                </section>
 
-        </section>
+                <section id="contato">
+                    <form id="form" action="https://www.freecodecamp.com/email-enviar">
+                        <fieldset>
+                            <legend>Cadastre seu e-mail para receber promoções</legend>
+                            <input type="email" name="email" id="email" placeholder="loremaipsum@email.com">
+                            <input type="submit" value="Enviar" id="submit">
+                        </fieldset>
+                    </form>
+                </section>
+            </div>
+        </main>
 
         <footer>
-            <p class="copyright">Elizabeth Velozo  &copy; 2022</p>
+            <p class="copyright">Elizabeth Velozo &copy; 2022</p>
         </footer>
-    </main>
+    </div>
 
     <!-- Testes do freeCodeCamp -->
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
