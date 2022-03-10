@@ -23,16 +23,18 @@
     --tamanho-logo__sobrenome: 1.7em;
     --tamanho-li-navegacao-principal: 1.1em;
     --tamanho-titulo-principal: 2em;
+    --tamanho-titulo-secundario: 2em;
 
     /* TAMANHOS DE IMAGENS */
     --tamanho-imagem-principal: 90vw;
+    --tamanho-imagem-h2: 30vw;
 }
 
 body {
     background-color: var(--branco-florido);
-    background-image: url("/imagens/plano-de-fundo.png");
+    background-image: url("../imagens/plano-de-fundo.png");
     background-repeat: no-repeat;
-    background-size: 100% 170vh;
+    background-size: 125vw 165vh;
     color: var(--feijao);
     z-index: 2;
 }
@@ -84,8 +86,18 @@ nav ul {
 /* FIM DA HEADER */
 
 /* MAIN */
+main {
+    margin: auto;
+    padding: 1.3em;
+}
+
+section:not(#contato) {
+    margin-bottom: 5em;
+}
+
 section#welcome-section {
     height: 100vh;
+    margin-bottom: 9em;
 }
 
 div.welcome-section-corpo {
@@ -96,14 +108,10 @@ div.welcome-section-corpo {
     padding-top: 2em;
 }
 
-#welcome-section img{
+section#welcome-section img{
     animation: menina-codando 5s 1 ease;
     position: relative;
     width: var(--tamanho-imagem-principal);
-}
-
-div.titulo {
-    width: 80vw;
 }
 
 h1 {
@@ -137,13 +145,55 @@ div.titulo span.titulo__pontuacao {
         top: 0px;
     }
 }
+
+.h2-container {
+    display: flex;
+    gap: 1.5em;
+}
+
+h2 {
+    display: flex;
+    flex-direction: column;
+    font-size: 2em;
+    font-weight: normal;
+    width: fit-content;
+}
+
+#sobre h2, #contato h2 {
+    text-align: end;
+}
+
+span.h2--maiusculo-terracota {
+    color: var(--terracota);
+    font-size: 1.3em;
+    text-transform: uppercase;
+}
+
+.imagem-h2 {
+    bottom: 2em;
+    position: relative;
+    width: var(--tamanho-imagem-h2);
+}
+
+.apresentacao p {
+    color: var(--hena);
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    text-align: justify;
+}
 /* FIM DA MAIN */
 
 /* BREAKPOINT TABLET */
 @media screen and (min-width: 690px) {
     :root {
+        /* TAMANHOS DE FONTES */
         --tamanho-li-navegacao-principal: 1.17em;
+        --tamanho-titulo-secundario: 2.3em;
+
+        /* TAMANHOS DE IMAGENS */
         --tamanho-imagem-principal: 40vw;
+        --tamanho-imagem-h2: 20vw;
+
     }
 
     body {
@@ -171,6 +221,10 @@ div.titulo span.titulo__pontuacao {
         gap: 2em;
     }
 
+    main {
+        width: 85vw;
+    }
+
     div.welcome-section-corpo {
         flex-direction: row;
         justify-content: space-between;
@@ -179,9 +233,22 @@ div.titulo span.titulo__pontuacao {
         padding-top: 15vh;
     }
 
+    section#welcome-section {
+        height: 100vw;
+        margin-bottom: 0;
+    }
+
     div.titulo {
         align-self: flex-end;
         width: auto;
+    }
+
+    h2 {
+        font-size: var(--tamanho-titulo-secundario);
+    }
+
+    .imagem-h2 {
+        bottom: 2.3em;
     }
 }
 
@@ -194,10 +261,11 @@ div.titulo span.titulo__pontuacao {
 
         /* TAMANHOS DE IMAGENS */
         --tamanho-imagem-principal: 30vw;
+        --tamanho-imagem-h2: 10vw;
     }
 
     body {
-        background-size: 100% 105vh;
+        background-size: 100% 110vh;
     }
 
     header {
@@ -208,15 +276,31 @@ div.titulo span.titulo__pontuacao {
         gap: 3em;
     }
 
+    main {
+        width: 70vw;
+    }
+
     div.welcome-section-corpo {
         gap: 3em;
         max-width: 68vw;
         padding-top: 25vh;
     }
+
+    section#welcome-section{
+        height: 100vh;
+        margin-bottom: 9em;
+    }
+
+    .imagem-h2:not(.imagem-sobre) {
+        bottom: 3em;
+    }
 }
 
 /* BREAKPOINT DESKTOP */
 @media screen and (min-width: 1600px) {
+    :root {
+        --tamanho-imagem-principal: 30vw;
+    }
     header {
         padding-inline: 23em;
     }
@@ -224,9 +308,5 @@ div.titulo span.titulo__pontuacao {
     div.welcome-section-corpo {
         max-width: 59vw;
         padding-top: 20vh;
-    }
-
-    section#welcome-section img{
-        width: 30vw;
     }
 }
