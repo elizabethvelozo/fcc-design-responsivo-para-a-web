@@ -16,6 +16,7 @@
     --rosa-bebe: #FFD0C7;
     --champanhe: #F8E9D1;
     --algodao-egipcio: #E6DFCE;
+
     --branco-florido: #FFF8F0;
 
     /* TAMANHOS DE FONTES */
@@ -23,7 +24,8 @@
     --tamanho-logo__sobrenome: 1.7em;
     --tamanho-li-navegacao-principal: 1.1em;
     --tamanho-titulo-principal: 2em;
-    --tamanho-titulo-secundario: 2em;
+    --tamanho-titulo-secundario: 2.1em;
+    --tamanho-titulo-terciario: 1.2em;
 
     /* TAMANHOS DE IMAGENS */
     --tamanho-imagem-principal: 90vw;
@@ -97,7 +99,7 @@ section:not(#contato) {
 
 section#welcome-section {
     height: 100vh;
-    margin-bottom: 9em;
+    margin-bottom: 15em;
 }
 
 div.welcome-section-corpo {
@@ -154,7 +156,7 @@ div.titulo span.titulo__pontuacao {
 h2 {
     display: flex;
     flex-direction: column;
-    font-size: 2em;
+    font-size: var(--tamanho-titulo-secundario);
     font-weight: normal;
     width: fit-content;
 }
@@ -180,6 +182,76 @@ span.h2--maiusculo-terracota {
     font-size: 1.5em;
     margin-bottom: 1em;
     text-align: justify;
+}
+
+div.projetos {
+    background-color: #e6dfce1a;
+    border: 1px solid #e6dfce40;
+    display: grid;
+    grid-gap: 7em;
+    grid-template-columns: 95%;
+    grid-template-rows: repeat(5, 50vh);
+    justify-content: center;
+    padding: 3em 2em;
+}
+
+.cartao {
+    border: 1px solid var(--feijao);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.cartao-header {
+    display: flex;
+    align-items: center;
+    height: 15%;
+    padding-inline: 1em;
+}
+
+h3 {
+    font-size: var(--tamanho-titulo-terciario);
+}
+
+.cartao__bolinhas {
+    align-items: center;
+    display: flex;
+    gap: 0.5em;
+    height: 100%;
+    justify-content: end;
+    max-width: 30%;
+    min-width: 30%;
+    margin-left: auto;
+}
+
+.cartao__bolinha {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+
+.cartao__bolinha--1 {
+    background-color: #e6dfce80;
+}
+
+.cartao__bolinha--2 {
+    background-color: #e6dfced9;
+}
+
+.cartao__bolinha--3 {
+    background-color: #713928b3;
+}
+
+.cartao__imagem {
+    border-top: 1px solid var(--feijao);
+    border-radius: 0 0 15px 15px;
+    height: 85%;
+    margin-top: auto;
+    mix-blend-mode: multiply;
+    object-fit: cover;
+    width: 100%;
 }
 /* FIM DA MAIN */
 
@@ -244,11 +316,21 @@ span.h2--maiusculo-terracota {
     }
 
     h2 {
-        font-size: var(--tamanho-titulo-secundario);
+        padding-left: 1em;
     }
 
     .imagem-h2 {
         bottom: 2.3em;
+    }
+
+    .apresentacao {
+        padding-inline: 3.5em;
+    }
+
+    div.projetos {
+        grid-gap: 2.5em;
+        grid-template-columns: repeat(2, minmax(27vw, 30vw));
+        grid-template-rows: repeat(3, minmax(25vh, 40vw));
     }
 }
 
@@ -294,6 +376,20 @@ span.h2--maiusculo-terracota {
     .imagem-h2:not(.imagem-sobre) {
         bottom: 3em;
     }
+
+    div.projetos {
+        grid-gap: 3em;
+        grid-template-columns: repeat(3, 17vw);
+        grid-template-rows: repeat(2, minmax(25vh, 45vh));
+    }
+
+    .cartao__imagem {
+        height: 95%;
+    }
+
+    a.project-tile:hover {
+        transform: scale(1.05);
+    }
 }
 
 /* BREAKPOINT DESKTOP */
@@ -308,5 +404,11 @@ span.h2--maiusculo-terracota {
     div.welcome-section-corpo {
         max-width: 59vw;
         padding-top: 20vh;
+    }
+
+    div.projetos {
+        grid-gap: 4em;
+        grid-template-columns: repeat(3, 15vw);
+        grid-template-rows: repeat(2, minmax(20vh, 37vh));
     }
 }
