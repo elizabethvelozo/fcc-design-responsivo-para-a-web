@@ -1,0 +1,168 @@
+/* BREAKPOINT TABLET */
+@media screen and (min-width: 690px) {
+    :root {
+        /* TAMANHOS DE FONTES */
+        --tamanho-li-navegacao-principal: 1.17em;
+        --tamanho-titulo-secundario: 2.3em;
+
+        /* TAMANHOS DE IMAGENS */
+        --tamanho-imagem-principal: 40vw;
+        --tamanho-imagem-h2: 20vw;
+    }
+
+    body {
+        background-size: 100% 65vh;
+    }
+
+    header {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        left: 0;
+        padding-inline: 4.5em;
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 1;
+    }
+
+    div.logo {
+        margin: 0;
+        padding-block: 1em;
+    }
+
+    nav ul {
+        gap: 2em;
+    }
+
+    main {
+        width: 85vw;
+    }
+
+    div.welcome-section-corpo {
+        flex-direction: row;
+        justify-content: space-between;
+        margin: auto;
+        max-width: 80vw;
+        padding-top: 15vh;
+    }
+
+    section#welcome-section {
+        height: 100vw;
+        margin-bottom: 0;
+    }
+
+    div.titulo {
+        align-self: flex-end;
+        width: auto;
+    }
+
+    h2 {
+        padding-left: 1em;
+    }
+
+    .imagem-h2 {
+        bottom: 2.3em;
+    }
+
+    .apresentacao {
+        padding-inline: 3.5em;
+    }
+
+    div.projetos {
+        grid-gap: 2.5em;
+        grid-template-columns: repeat(2, minmax(27vw, 30vw));
+        grid-template-rows: repeat(3, minmax(25vh, 40vw));
+    }
+
+    .cartao-5 {
+       position: relative;
+       left: 25%;
+    }
+
+    a#profile-link {
+        align-self: center;
+        justify-self: center;
+        left: 10%;
+        position: relative;
+        top: 10%;
+    }
+}
+
+/* BREAKPOINT DESKTOP */
+@media screen and (min-width: 1100px) {
+    :root {
+        /* TAMANHOS DE FONTES */
+        --tamanho-li-navegacao-principal: 1.3em;
+        --tamanho-titulo-principal: 3em;
+        --tamanho-titulo-terciario: 1.15em;
+
+        /* TAMANHOS DE IMAGENS */
+        --tamanho-imagem-principal: 30vw;
+        --tamanho-imagem-h2: 10vw;
+    }
+
+    body {
+        background-size: 100% 110vh;
+    }
+
+    header {
+        padding-inline: 13em;
+    }
+
+    nav ul {
+        gap: 3em;
+    }
+
+    main {
+        width: 70vw;
+    }
+
+    div.welcome-section-corpo {
+        gap: 3em;
+        max-width: 68vw;
+        padding-top: 25vh;
+    }
+
+    section#welcome-section{
+        height: 100vh;
+        margin-bottom: 15vh;
+    }
+
+    .imagem-h2:not(.imagem-sobre) {
+        bottom: 3em;
+    }
+
+    div.projetos {
+        grid-gap: 3em;
+        grid-template-columns: repeat(3, 17vw);
+        grid-template-rows: repeat(2, minmax(25vh, 45vh));
+    }
+
+    .cartao-4 {
+        left: 25%;
+        position: relative;
+    }
+}
+
+/* BREAKPOINT DESKTOP */
+@media screen and (min-width: 1600px) {
+    :root {
+        --tamanho-imagem-principal: 30vw;
+        --tamanho-titulo-terciario: 1.21em;
+    }
+    header {
+        padding-inline: 23em;
+    }
+
+    div.welcome-section-corpo {
+        max-width: 59vw;
+        padding-top: 20vh;
+    }
+
+    div.projetos {
+        grid-gap: 4em;
+        grid-template-columns: repeat(3, 15vw);
+        grid-template-rows: repeat(2, minmax(20vh, 37vh));
+    }
+}
