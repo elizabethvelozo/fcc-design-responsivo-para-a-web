@@ -1,6 +1,5 @@
 * {
     box-sizing: border-box;
-    font-family: 'Josefin Slab', serif;
     margin: 0;
     padding: 0;
     text-decoration: none;
@@ -25,7 +24,7 @@
     --tamanho-li-navegacao-principal: 1.1em;
     --tamanho-titulo-principal: 2em;
     --tamanho-titulo-secundario: 2.1em;
-    --tamanho-titulo-terciario: 1.2em;
+    --tamanho-titulo-terciario: 1em;
 
     /* TAMANHOS DE IMAGENS */
     --tamanho-imagem-principal: 90vw;
@@ -38,6 +37,7 @@ body {
     background-repeat: no-repeat;
     background-size: 125vw 165vh;
     color: var(--feijao);
+    font-family: 'Josefin Slab', serif;
     z-index: 2;
 }
 
@@ -93,13 +93,13 @@ main {
     padding: 1.3em;
 }
 
-section:not(#contato) {
-    margin-bottom: 5em;
+section:not(.contato) {
+    margin-bottom: 15vh;
 }
 
 section#welcome-section {
     height: 100vh;
-    margin-bottom: 15em;
+    margin-bottom: 35vh;
 }
 
 div.welcome-section-corpo {
@@ -148,6 +148,7 @@ div.titulo span.titulo__pontuacao {
     }
 }
 
+/* SEÇÕES - TAGS GENÉRICAS */
 .h2-container {
     display: flex;
     gap: 1.5em;
@@ -177,21 +178,29 @@ span.h2--maiusculo-terracota {
     width: var(--tamanho-imagem-h2);
 }
 
+/* SEÇÃO SOBRE */
 .apresentacao p {
-    color: var(--hena);
+    color: var(--feijao);
     font-size: 1.5em;
     margin-bottom: 1em;
     text-align: justify;
+}
+
+/* SEÇÃO PROJETOS */
+a.project-tile:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
 }
 
 div.projetos {
     background-color: #e6dfce1a;
     border: 1px solid #e6dfce40;
     display: grid;
-    grid-gap: 7em;
+    grid-gap: 5em;
     grid-template-columns: 95%;
     grid-template-rows: repeat(5, 50vh);
     justify-content: center;
+    margin-top: -2.1vh;
     padding: 3em 2em;
 }
 
@@ -205,6 +214,7 @@ div.projetos {
 }
 
 .cartao-header {
+    border-radius: 15px 15px 0 0;
     display: flex;
     align-items: center;
     height: 15%;
@@ -212,7 +222,10 @@ div.projetos {
 }
 
 h3 {
+    font-family: 'Lekton', sans-serif;
     font-size: var(--tamanho-titulo-terciario);
+    font-weight: normal;
+    line-height: 1em;
 }
 
 .cartao__bolinhas {
@@ -227,9 +240,9 @@ h3 {
 }
 
 .cartao__bolinha {
+    border-radius: 50%;
     width: 15px;
     height: 15px;
-    border-radius: 50%;
 }
 
 .cartao__bolinha--1 {
@@ -253,6 +266,32 @@ h3 {
     object-fit: cover;
     width: 100%;
 }
+
+a#profile-link {
+    font-family: 'Lekton', sans-serif;
+    font-size: var(--tamanho-titulo-terciario);
+    line-height: 1em;
+    max-width: 40%;
+    place-self: end;
+    text-align: center;
+}
+
+a#profile-link:hover {
+    color: var(--hena);
+}
+
+a#profile-link span {
+    display: flex;
+    flex-direction: column;
+}
+
+a#profile-link i {
+    color: var(--quentao);
+    font-size: 1.25em;
+    left: 0.3em;
+    position: relative;
+    top: 0.5em;
+}
 /* FIM DA MAIN */
 
 /* BREAKPOINT TABLET */
@@ -265,7 +304,6 @@ h3 {
         /* TAMANHOS DE IMAGENS */
         --tamanho-imagem-principal: 40vw;
         --tamanho-imagem-h2: 20vw;
-
     }
 
     body {
@@ -332,6 +370,19 @@ h3 {
         grid-template-columns: repeat(2, minmax(27vw, 30vw));
         grid-template-rows: repeat(3, minmax(25vh, 40vw));
     }
+
+    .cartao-5 {
+       position: relative;
+       left: 25%;
+    }
+
+    a#profile-link {
+        align-self: center;
+        justify-self: center;
+        left: 10%;
+        position: relative;
+        top: 10%;
+    }
 }
 
 /* BREAKPOINT DESKTOP */
@@ -340,6 +391,7 @@ h3 {
         /* TAMANHOS DE FONTES */
         --tamanho-li-navegacao-principal: 1.3em;
         --tamanho-titulo-principal: 3em;
+        --tamanho-titulo-terciario: 1.15em;
 
         /* TAMANHOS DE IMAGENS */
         --tamanho-imagem-principal: 30vw;
@@ -370,7 +422,7 @@ h3 {
 
     section#welcome-section{
         height: 100vh;
-        margin-bottom: 9em;
+        margin-bottom: 15vh;
     }
 
     .imagem-h2:not(.imagem-sobre) {
@@ -383,12 +435,9 @@ h3 {
         grid-template-rows: repeat(2, minmax(25vh, 45vh));
     }
 
-    .cartao__imagem {
-        height: 95%;
-    }
-
-    a.project-tile:hover {
-        transform: scale(1.05);
+    .cartao-4 {
+        left: 25%;
+        position: relative;
     }
 }
 
@@ -396,6 +445,7 @@ h3 {
 @media screen and (min-width: 1600px) {
     :root {
         --tamanho-imagem-principal: 30vw;
+        --tamanho-titulo-terciario: 1.21em;
     }
     header {
         padding-inline: 23em;
