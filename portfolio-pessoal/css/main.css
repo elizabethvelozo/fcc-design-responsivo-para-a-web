@@ -90,6 +90,10 @@ nav ul {
     list-style: none;
     padding: 1em;
 }
+
+.colchete-angular, .barra-vertical {
+    display: none;
+}
 /* FIM DA HEADER */
 
 /* MAIN */
@@ -325,7 +329,7 @@ a#profile-link i {
     align-items: center;
     display: flex;
     flex-direction: column;
-    font-size: 1.25em;
+    font-size: 1.45em;
     list-style: none;
     max-width: 70%;
     text-align: center;
@@ -346,7 +350,7 @@ a#profile-link i {
     -webkit-text-stroke-color: var(--feijao-claro);
 }
 
-.menu-social__link i:hover {
+.menu-social__link:hover i {
     -webkit-text-stroke-color: var(--quentao);
 }
 /* FIM DA MAIN */
@@ -365,6 +369,6 @@ footer {
 }
 
 .atribuicao a {
-    text-decoration: 0.01em underline dashed ;
+    text-decoration: 0.01em underline dashed;
 }
 /* FIM DA FOOTER */

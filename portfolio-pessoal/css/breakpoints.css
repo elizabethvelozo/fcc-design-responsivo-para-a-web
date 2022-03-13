@@ -134,6 +134,30 @@
         gap: 3em;
     }
 
+    .colchete-angular, .barra-vertical {
+        color: var(--algodao-egipcio);
+        display: inline;
+    }
+
+    nav ul a:hover .colchete-angular, nav ul a:focus .colchete-angular {
+        color: var(--terracota);
+    }
+
+    nav ul a:hover .barra-vertical, nav ul a:focus .barra-vertical {
+        animation: barra-vertical 1s infinite;
+        animation-timing-function: steps(1);
+    }
+
+    @keyframes barra-vertical {
+        0% {
+            color: var(--terracota);
+        }
+
+        50% {
+            color: var(--algodao-egipcio);
+        }
+    }
+
     main {
         width: 70vw;
     }
@@ -170,11 +194,11 @@
     }
 
     .menu-social ul {
-        gap: 3vw
+        gap: 5vw;
     }
 
     .menu-social__link li {
-        max-width: 15vw;
+        max-width: 13vw;
     }
 }
 
@@ -199,8 +223,16 @@
         grid-template-rows: repeat(2, minmax(20vh, 37vh));
     }
 
+    .menu-social {
+        padding-block: 15vh;
+    }
+
     .menu-social ul {
         gap: 5vw;
+    }
+
+    .menu-social__link li {
+        max-width: 15vw;
     }
 
     .menu-social__link i {
