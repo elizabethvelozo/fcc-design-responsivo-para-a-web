@@ -89,6 +89,19 @@
         top: 10%;
     }
 
+    .menu-social {
+        margin-inline: -10vh;
+    }
+
+    .menu-social ul {
+        flex-direction: row;
+        gap: 0;
+    }
+
+    .menu-social__link {
+        max-width: 25vw;
+    }
+
     footer {
         align-items: center;
         flex-direction: row;
@@ -150,6 +163,19 @@
         left: 25%;
         position: relative;
     }
+
+    .menu-social {
+        margin-inline: -35vh;
+        margin-top: -5vw;
+    }
+
+    .menu-social ul {
+        gap: 3vw
+    }
+
+    .menu-social__link li {
+        max-width: 15vw;
+    }
 }
 
 /* BREAKPOINT DESKTOP */
@@ -171,5 +197,13 @@
         grid-gap: 4em;
         grid-template-columns: repeat(3, 15vw);
         grid-template-rows: repeat(2, minmax(20vh, 37vh));
+    }
+
+    .menu-social ul {
+        gap: 5vw;
+    }
+
+    .menu-social__link i {
+        font-size: 3.7em;
     }
 }
