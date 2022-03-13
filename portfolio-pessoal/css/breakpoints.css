@@ -4,6 +4,7 @@
         /* TAMANHOS DE FONTES */
         --tamanho-li-navegacao-principal: 1.17em;
         --tamanho-titulo-secundario: 2.3em;
+        --tamanho-p-rodape: 1.1em;
 
         /* TAMANHOS DE IMAGENS */
         --tamanho-imagem-principal: 40vw;
@@ -86,6 +87,12 @@
         left: 10%;
         position: relative;
         top: 10%;
+    }
+
+    footer {
+        align-items: center;
+        flex-direction: row;
+        height: 5vh;
     }
 }
 

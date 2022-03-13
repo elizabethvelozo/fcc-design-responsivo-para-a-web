@@ -15,7 +15,6 @@
     --rosa-bebe: #FFD0C7;
     --champanhe: #F8E9D1;
     --algodao-egipcio: #E6DFCE;
-
     --branco-florido: #FFF8F0;
 
     /* TAMANHOS DE FONTES */
@@ -25,6 +24,7 @@
     --tamanho-titulo-principal: 2em;
     --tamanho-titulo-secundario: 2.1em;
     --tamanho-titulo-terciario: 1em;
+    --tamanho-p-rodape: 1em;
 
     /* TAMANHOS DE IMAGENS */
     --tamanho-imagem-principal: 90vw;
@@ -293,3 +293,20 @@ a#profile-link i {
     top: 0.5em;
 }
 /* FIM DA MAIN */
+
+/* FOOTER */
+footer {
+    background-color: var(--algodao-egipcio);
+    display: flex;
+    flex-direction: column;
+    font-family: 'Lekton', sans-serif;
+    font-size: var(--tamanho-p-rodape);
+    height: 9vh;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.atribuicao a {
+    text-decoration: 0.01em underline dashed ;
+}
+/* FIM DA FOOTER */
