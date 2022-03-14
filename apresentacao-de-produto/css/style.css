@@ -233,6 +233,7 @@ footer {
 
     nav ul {
         gap: 2.5em;
+        padding-top: 2em;
     }
 
     .corpo-rolante {

@@ -1,5 +1,9 @@
 # Projeto 3: Staccato :musical_score:
 
+## Disponível em:
+
+- [Site](https://elizabethvelozo.github.io/fcc-design-responsivo-para-a-web/apresentacao-de-produto/staccato.html)
+
 ## Descrição
 
 - Criar uma landing page para um produto.
